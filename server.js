@@ -17,6 +17,12 @@ const pool = new Pool({
 app.post('/api/inscrever', async (req, res) => {
   const { nome, telefone, restricao } = req.body;
   const token = 'TOKEN-' + Math.random().toString(36).substring(2, 9).toUpperCase();
+  const nomeLimpo = nome ? nome.trim() : '';
+const telefoneLimpo = telefone ? telefone.trim() : '';
+
+if (!nomeLimpo || !telefoneLimpo) {
+  return res.status(400).json({ erro: 'Nome e telefone são obrigatórios.' });
+}
 
   try {
     const result = await pool.query(
