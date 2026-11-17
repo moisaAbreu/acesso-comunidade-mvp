@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AcessoComunidade - Portaria</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/html5-qrcode"></script>
+  <style>
+    body { background-color: #121212; color: white; }
+    .btn-acessivel { min-height: 44px; font-size: 1.1rem; }
+    #reader { width: 100%; border-radius: 8px; overflow: hidden; }
+  </style>
+</head>
+<body>
+  <div class="container py-3" style="max-width: 480px;">
+    
+    <!-- Cabeçalho -->
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <span class="fw-bold">AcessoComunidade</span>
+      <span class="badge bg-secondary">Marcos (Voluntário)</span>
+    </div>
+
+    <h5 class="text-center text-light mb-3">Retiro de Jovens 2026 - Portaria</h5>
+
+    <!-- Visor da Câmera (Tela 2) -->
+    <div id="reader"></div>
+
+    <div class="mt-3 text-center">
+      <a href="/" class="btn btn-outline-light w-100 btn-acessivel">Sair</a>
+    </div>
+
+  </div>
+
+  <!-- Modal de Alerta / Resultado (Tela 3) -->
+  <div class="modal fade" id="modalResultado" tabindex="-1" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+      <div id="modal-content-bg" class="modal-content text-white text-center p-4">
+        <div id="modal-icone" class="display-1 mb-2"></div>
+        <h2 id="modal-status" class="fw-bold"></h2>
+        <h3 id="modal-nome" class="mt-3"></h3>
+        <p id="modal-restricao" class="fs-5 mt-2"></p>
+        <button id="btn-proxima" class="btn btn-light w-100 btn-acessivel fw-bold mt-4" data-bs-dismiss="modal">Próxima Leitura</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
