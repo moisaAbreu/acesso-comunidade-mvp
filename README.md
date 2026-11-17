@@ -23,3 +23,7 @@ acesso-comunidade/
 ├── .gitignore          # Arquivos ignorados pelo Git
 ├── package.json        # Dependências do projeto
 └── server.js           # Servidor Express e rotas REST
+
+
+git add README.md
+git commit -m "docs: adiciona documentação das rotas REST e fluxo de validação no README.md"
